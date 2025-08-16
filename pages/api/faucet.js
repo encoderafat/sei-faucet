@@ -4,16 +4,16 @@ import { ethers } from 'ethers';
 // Token configurations
 const TOKENS = {
   METH: {
-    address: '0x5FbDB2315678afecb367f032d93F642f64180aa3',
+    address: '0xF35e93EaeE4c6dCfA24eb0BD6aE1164c8a0ffB64',
     amount: ethers.parseEther('100') // 100 METH
   },
   MBTC: {
-    address: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512',
+    address: '0xFF3260a3aab725b4BbBf9A94A57A5718196E5a73',
     amount: ethers.parseEther('2.5') // 2.5 MBTC
   },
   USDT: {
-    address: '0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0',
-    amount: ethers.parseUnits('400000', 6) // 400000 USDT (assuming 6 decimals)
+    address: '0x0fD55d06B382C72d8b95f5Bf9Ae1682D079B79bB',
+    amount: ethers.parseEther('400000') // 400000 USDT (18 decimals)
   }
 };
 
@@ -115,7 +115,7 @@ export default async function handler(req, res) {
         txHashes.push({
           token: tokenSymbol,
           txHash: tx.hash,
-          amount: ethers.formatUnits(tokenConfig.amount, 18) // Adjust decimals as needed
+          amount: ethers.formatEther(tokenConfig.amount) // All tokens use 18 decimals
         });
 
       } catch (tokenError) {

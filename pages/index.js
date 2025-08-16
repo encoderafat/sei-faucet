@@ -10,9 +10,9 @@ export default function TokenFaucet() {
   const [distributionHistory, setDistributionHistory] = useState([]);
 
   const tokens = [
-    { symbol: 'METH', address: '0x5FbDB2315678afecb367f032d93F642f64180aa3', amount: '100' },
-    { symbol: 'MBTC', address: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512', amount: '2.5' },
-    { symbol: 'USDT', address: '0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0', amount: '400000' }
+    { symbol: 'METH', address: '0xF35e93EaeE4c6dCfA24eb0BD6aE1164c8a0ffB64', amount: '100' },
+    { symbol: 'MBTC', address: '0xFF3260a3aab725b4BbBf9A94A57A5718196E5a73', amount: '2.5' },
+    { symbol: 'USDT', address: '0x0fD55d06B382C72d8b95f5Bf9Ae1682D079B79bB', amount: '400000' }
   ];
 
   // Mock function to check rate limits (in real implementation, this would call your backend)
