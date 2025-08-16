@@ -84,8 +84,8 @@ export default async function handler(req, res) {
     }
 
     // Initialize provider and wallet
-    const provider = new ethers.JsonRpcProvider(process.env.SEI_RPC_URL);
-    const wallet = new ethers.Wallet(process.env.FAUCET_PRIVATE_KEY, provider);
+    const provider = new ethers.JsonRpcProvider(process.env.NEXT_PUBLIC_SEI_RPC_URL);
+    const wallet = new ethers.Wallet(process.env.NEXT_PUBLIC_FAUCET_PRIVATE_KEY, provider);
 
     const txHashes = [];
 
